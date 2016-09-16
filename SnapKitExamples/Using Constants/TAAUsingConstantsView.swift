@@ -27,7 +27,7 @@ class TAAUsingConstantsView: UIView {
         self.initializeElements()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -61,7 +61,7 @@ class TAAUsingConstantsView: UIView {
     //MARK: Initialize view
     
     private func initializeView() -> UIView {
-        var view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor.randomColor()
         view.layer.borderColor = UIColor.blackColor().CGColor
         view.layer.borderWidth = 2

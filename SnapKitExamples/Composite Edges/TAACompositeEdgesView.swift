@@ -22,7 +22,7 @@ class TAACompositeEdgesView: UIView {
         self.initializeElements()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -34,13 +34,13 @@ class TAACompositeEdgesView: UIView {
         
         var lastView: UIView = self
         
-        for i in 0...9 {
-            var view = self.initializeView()
+        for _ in 0...9 {
+            let view = self.initializeView()
             self.addSubview(view)
             
-            view.snp_makeConstraints({ (make) -> Void in
-                make.edges.equalTo(lastView).insets(kInsets)
-            })
+            view.snp_makeConstraints{ (make) -> Void in
+                make.edges.equalTo(lastView).inset(kInsets)
+            }
             lastView = view
         }
     }
@@ -48,7 +48,7 @@ class TAACompositeEdgesView: UIView {
     //MARK: Initialize view
     
     private func initializeView() -> UIView {
-        var view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor.randomColor()
         view.layer.borderColor = UIColor.blackColor().CGColor
         view.layer.borderWidth = 2

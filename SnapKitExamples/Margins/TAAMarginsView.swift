@@ -20,7 +20,7 @@ class TAAMarginsView: UIView {
         self.initializeElements()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -32,17 +32,17 @@ class TAAMarginsView: UIView {
         
         var lastView: UIView = self
         
-        for i in 0...9 {
+        for _ in 0...9 {
             let view = self.initializeView()
             view.layoutMargins = UIEdgeInsetsMake(5, 10, 15, 20)
             self.addSubview(view)
             
-            view.snp_makeConstraints({ (make) -> Void in
+            view.snp_makeConstraints{ (make) -> Void in
                 make.top.equalTo(lastView.snp_topMargin)
                 make.bottom.equalTo(lastView.snp_bottomMargin)
                 make.left.equalTo(lastView.snp_leftMargin)
                 make.right.equalTo(lastView.snp_rightMargin)
-            })
+            }
             lastView = view
         }
     }
@@ -50,7 +50,7 @@ class TAAMarginsView: UIView {
     //MARK: Initialize view
     
     private func initializeView() -> UIView {
-        var view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor.randomColor()
         view.layer.borderColor = UIColor.blackColor().CGColor
         view.layer.borderWidth = 2

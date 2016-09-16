@@ -29,7 +29,7 @@ class TAAAspectFitView: UIView {
         self.initializeElements()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -87,7 +87,7 @@ class TAAAspectFitView: UIView {
     //MARK: Initialize view
     
     private func initializeView() -> UIView {
-        var view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor.randomColor()
         
         return view

@@ -257,12 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D83794D1B61678C00A476A2 /* Build configuration list for PBXNativeTarget "SnapKitExamples" */;
 			buildPhases = (
-				DC78FEDFDD0D22F13B890FD6 /* Check Pods Manifest.lock */,
+				DC78FEDFDD0D22F13B890FD6 /* [CP] Check Pods Manifest.lock */,
 				8D83792A1B61678C00A476A2 /* Sources */,
 				8D83792B1B61678C00A476A2 /* Frameworks */,
 				8D83792C1B61678C00A476A2 /* Resources */,
-				2B00B9C72161EE343089B7FA /* Embed Pods Frameworks */,
-				5184DEBB0136A3DF710113A4 /* Copy Pods Resources */,
+				2B00B9C72161EE343089B7FA /* [CP] Embed Pods Frameworks */,
+				5184DEBB0136A3DF710113A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,7 +297,9 @@
 		8D8379261B61678C00A476A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ivana Rast";
 				TargetAttributes = {
 					8D83792D1B61678C00A476A2 = {
@@ -348,14 +350,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B00B9C72161EE343089B7FA /* Embed Pods Frameworks */ = {
+		2B00B9C72161EE343089B7FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,14 +365,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapKitExamples/Pods-SnapKitExamples-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5184DEBB0136A3DF710113A4 /* Copy Pods Resources */ = {
+		5184DEBB0136A3DF710113A4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,14 +380,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapKitExamples/Pods-SnapKitExamples-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC78FEDFDD0D22F13B890FD6 /* Check Pods Manifest.lock */ = {
+		DC78FEDFDD0D22F13B890FD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +473,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -538,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SnapKitExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taarna.myexamples.swift.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -549,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SnapKitExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taarna.myexamples.swift.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -567,6 +572,7 @@
 				);
 				INFOPLIST_FILE = SnapKitExamplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taarna.myexamples.swift.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapKitExamples.app/SnapKitExamples";
 			};
@@ -582,6 +588,7 @@
 				);
 				INFOPLIST_FILE = SnapKitExamplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taarna.myexamples.swift.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapKitExamples.app/SnapKitExamples";
 			};
